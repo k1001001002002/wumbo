@@ -13,5 +13,6 @@ public class training {
         System.out.println("hello");
         System.out.println("goodbye");
         System.out.println("Kenneth Wong's push");
+        System.out.println("Nina's push");
     }
 }
