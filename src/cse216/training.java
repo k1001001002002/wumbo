@@ -14,5 +14,7 @@ public class training {
         System.out.println("goodbye");
         System.out.println("Kenneth Wong's push");
         System.out.println("Nina's push");
+        System.out.println("April's here! GUI transported");
+        
     }
 }
