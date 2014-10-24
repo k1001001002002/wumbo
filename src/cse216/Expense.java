@@ -6,29 +6,29 @@ import java.text.SimpleDateFormat;
 
 public class Expense {
     
-    public int amount;
-    Date time;
+    private double amount;
+    private Date time;
     DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
     int eid;
-    String category;
+    private String category;
 
     public Expense() {
     }
 
-    public Expense(int amount, String category) {
+    public Expense(double amount, String category, Date time) {
         this.amount = amount;
         this.category = category;
-        this.time = new Date();
+        this.time = time;
     }
     
-    public Expense(int amount, Date time, String category){
-        this.amount = amount;
-        this.time = time;
-        this.category = category;
-
+    public Expense(int amount, String category){
+        this(amount,category,new Date());
+        //this.amount = amount;
+        //this.time = time;
+        //this.category = category;
     }
 
-    public int getAmount() {
+    public double getAmount() {
         return amount;
     }
 
@@ -36,7 +36,7 @@ public class Expense {
         return category;
     }
 
-    public void setAmount(int amount) {
+    public void setAmount(double amount) {
         this.amount = amount;
     }
 
@@ -56,10 +56,14 @@ public class Expense {
         this.dateFormat = dateFormat;
     }
     
-        public void setCategory(String category) {
+    public void setCategory(String category) {
         this.category = category;
     }
-    
+ 
+    public String toString() {
+	return "Cost was " + this.amount + ", and the category is " + this.category + ", and the recorded time is " + dateFormat.format(this.time);
+    }
+        
 }
 
 
