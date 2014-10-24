@@ -286,7 +286,7 @@ public class NewReceipt extends javax.swing.JFrame {
     }//GEN-LAST:event_categoryListActionPerformed
 
     private void submitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitButtonActionPerformed
-        int amount = Integer.parseInt(amountText.getText());
+        double amount = Double.parseDouble(amountText.getText());
         String category = (String)categoryList.getSelectedItem();
         Expense newExpense = new Expense(amount, category);
     }//GEN-LAST:event_submitButtonActionPerformed
