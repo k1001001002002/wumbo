@@ -16,7 +16,8 @@ public class CSE216 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Expense transaction = new Expense(500, "Grocery");
+        System.out.println(transaction.getDateFormat().format(transaction.getTime()));
     }
     
 }
