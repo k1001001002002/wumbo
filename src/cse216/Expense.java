@@ -8,7 +8,7 @@ public class Expense {
     
     private double amount;
     private Date time;
-    DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+    DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
     int eid;
     private String category;
 
@@ -61,7 +61,7 @@ public class Expense {
     }
  
     public String toString() {
-	return "Cost was " + this.amount + ", and the category is " + this.category + ", and the recorded time is " + dateFormat.format(this.time);
+	return "Cost was " + this.amount + ", and the category is " + this.category + ", and recorded on " + dateFormat.format(this.time);
     }
         
 }
