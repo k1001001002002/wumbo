@@ -17,11 +17,11 @@ public class Expense {
 
     public Expense(double amount, String category, Date time) {
         this.amount = amount;
-        this.category = category;
+        this.category = category.toUpperCase();
         this.time = time;
     }
     
-    public Expense(int amount, String category){
+    public Expense(double amount, String category){
         this(amount,category,new Date());
         //this.amount = amount;
         //this.time = time;
